@@ -1,0 +1,121 @@
+.containerDiv {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form {
+    width: 20%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: #0B2447 solid;
+    align-items: center; 
+    border-radius: 2px;
+    min-width: 200px;
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.formtitleDiv {
+    height: 20%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 3px solid;
+}
+
+.formtitleDiv h3 {
+    color: #0B2447;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.formtitleDiv span {
+    font-size: 25px;
+}
+
+.inputDiv {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.inputDiv input {
+    background-color: #D7C0AE;
+    height: 30px;
+    position: relative;
+    width: 80%;
+    border-style: inherit;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+.inputDiv div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    width: 70%;
+    height: 25%;
+}
+
+.inputDiv input:hover {
+    width: 100%;
+
+}
+
+input:focus {
+    border-style: #0B2447 solid;
+}
+
+.buttonDiv {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton {
+    font-family: 'Quicksand', sans-serif;
+    width: 100px;
+    height: 40px; 
+    border-style: unset;
+    border-radius: 3px;
+    border: #0B2447 solid;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: #D7C0AE;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Quicksand', sans-serif;
+    color: grey;
+    font-size: 15px;
+  }
+
+  input[type="text"]
+{
+    font-family: 'Quicksand', sans-serif;
+    color: #1B2430;
+    font-size: 18px;
+    
+    
+}
