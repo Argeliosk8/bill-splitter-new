@@ -4,10 +4,9 @@ import style from "./ItemsTable.module.css"
 function ItemsTable({items, handleDelete}){
 
     const topRow = {
-        id: 'ID',
         payer: 'Payer',
         item: 'Item',
-        qty: 'Quantity',
+        qty: 'Qty',
         price: 'Price',
         total: 'Total',
         delete: ' '
@@ -16,7 +15,7 @@ function ItemsTable({items, handleDelete}){
     const renderTopRow = ()=>{
         const rowTitles = Object.values(topRow)
         return rowTitles.map((title)=>{
-            return (<th>{title}</th>)
+            return (<div><th>{title}</th></div>)
         })
     }
 

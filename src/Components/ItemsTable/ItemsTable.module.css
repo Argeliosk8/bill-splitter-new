@@ -2,6 +2,7 @@
     color: #0B2447;
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
+    text-align: center;
 }
 
 th {
@@ -11,22 +12,24 @@ th {
 .tableDiv {
     position: relative;
     width: 50%;
-    height: 80%;
+    height: 100%;
     border: #0B2447 solid;
-    min-width: 400px;
-    margin-left: 20px;
+    min-width: 350px;
     margin-top: 20px;
     border-radius: 15px;
+    overflow: auto;
+    
 }
 
 .tableDiv table {
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 95%;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: auto;
+    
 }
 
 .tableDiv table tr {
@@ -41,11 +44,19 @@ th {
 
 .tableDiv table tr div {
     position: relative;
-    width: 25%;
+    width: 16.6%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+}
+
+.tableDiv table tr div:last-child {
+    width: 10%;
+}
+
+.tableDiv table tr div td {
+    text-align: center;
 }
 
 .tableDiv table tr:first-child {
@@ -53,8 +64,12 @@ th {
     
 }
 
+
+
 .deleteButton {
     background-color: #D7C0AE;
     border: none;
     font-size: 15px;
+    position: relative;
+    width: 8%;
 }

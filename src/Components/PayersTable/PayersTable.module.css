@@ -1,0 +1,64 @@
+* {
+    box-sizing: content-box;
+}
+
+.payerContainer {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    border: solid #0B2447; 
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.titleDiv {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid #0B2447;
+}
+
+.payersDiv {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.payerNameDiv {
+    width: 50%;
+    border-right: solid #0B2447;
+    height: 100%;
+}
+
+.payerTotalDiv {
+    width: 50%;
+    height: 100%;
+}
+
+
+.grandTotalDiv {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid #0B2447;
+}
+
+
+.grandTotalDiv h3 {
+    padding-right: 10px;
+    padding-left: 10px;
+}

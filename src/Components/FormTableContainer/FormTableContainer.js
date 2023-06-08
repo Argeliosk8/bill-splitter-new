@@ -1,6 +1,8 @@
 import React, {useState}  from "react";
 import ItemsTable from "../ItemsTable/ItemsTable";
+import PayersTable from "../PayersTable/PayersTable";
 import style from "./FormTableContainer.module.css";
+
 
 
 function FormTableContainer (){
@@ -8,11 +10,9 @@ function FormTableContainer (){
     const [item, setItem] = useState('')
     const [quantity, setQuantity] = useState(null)
     const [price, setPrice] = useState(null)
-    const [id, setID] = useState(0)
     const [items, setItems] = useState([])
 
     const newItem = {
-        id: id,
         payer: payer,
         item: item,
         quantity: quantity,
@@ -53,22 +53,37 @@ function FormTableContainer (){
 
     function clickHandlerAddButton(event){
         event.preventDefault()
-        if(newItem.payer && newItem.item && newItem.quantity && newItem.price){
-            setID((prev)=>prev + 1)
+        
+        if(checkInputs()){
             setItems((prev)=>[newItem, ...prev])
+            cleanInputs()            
         } else {
-            alert('Missing information')
+            alert('Missing or wrong input')
         }
         
     }  
 
+    function cleanInputs(){
+        //document.getElementById("payer").value = ''
+        document.getElementById("item").value = ''
+        document.getElementById("qty").value = ''
+        document.getElementById("price").value = ''
+        setItem('')
+        setItem('')
+        setQuantity(null)
+        setPrice(null)
+    }
+
+    function checkInputs(){
+        if(newItem.payer && newItem.item && newItem.quantity > 0 && newItem.price > 0) {
+            return true
+        }
+    }
+
     const handleDelete = (itemToDelete) => {
         const updatedItems = items.filter((item)=> item != itemToDelete)
         setItems(updatedItems)
-    }
-
-
-    
+    }    
 
     return (
         <div className={style.containerDiv}>
@@ -87,6 +102,7 @@ function FormTableContainer (){
                 </div>
             </div>
             <ItemsTable items={items} handleDelete={handleDelete}/>
+            <PayersTable items={items}/>
         </div>
     )
 }
