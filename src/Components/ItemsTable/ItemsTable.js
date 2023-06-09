@@ -19,16 +19,16 @@ function ItemsTable({items, handleDelete}){
         })
     }
 
-    const renderItem = (obj) => {
+    const renderItemValues = (obj) => {
         const values = Object.values(obj)
         return values.map((value)=>{
             return (<div><td>{value}</td></div>)
         })
     }
 
-    const renderAllItems = (arr) =>{
-        return arr.map((item)=>{
-            return (<tr>{renderItem(item)}<button className={style.deleteButton} onClick={()=>handleDelete(item)}><span class="material-symbols-outlined">
+    const renderAllItems = (items) =>{
+        return items.map((item)=>{
+            return (<tr>{renderItemValues(item)}<button className={style.deleteButton} onClick={()=>handleDelete(item)}><span class="material-symbols-outlined">
             delete
             </span></button></tr>)
         })

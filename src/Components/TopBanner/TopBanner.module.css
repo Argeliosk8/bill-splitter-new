@@ -1,12 +1,12 @@
 .bannerDiv {
-    width: 100%;
+    width: 50%;
     height: 5%;
     text-align: center;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: dotted #0B2447;
+    border-bottom: solid #0B2447;
     margin-bottom: 10px;
 }
 
